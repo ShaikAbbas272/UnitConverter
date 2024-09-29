@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+        />
+
+
+        <!-- Category Spinner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="30dp"
+            android:padding="16dp">
+            <!--    <Spinner-->
+            <!--        android:id="@+id/categorySpinner"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginBottom="16dp"-->
+            <!--        android:layout_alignParentTop="true"/>-->
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="70dp"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <!-- Input Value Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputValueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categorySpinner"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/categorySpinner"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Enter value"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- From Unit Spinner -->
+            <Spinner
+                android:id="@+id/fromSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inputValueLayout"
+                android:layout_marginBottom="16dp"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+
+            <!-- To Unit Spinner -->
+            <Spinner
+                android:id="@+id/toSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fromSpinner"
+                android:layout_marginBottom="16dp"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+            <!-- Convert Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/convertButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toSpinner"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:backgroundTint="@color/black"
+                android:text="Convert"
+                android:textColor="@color/white" />
+
+            <!-- Show All Conversions Button -->
+
+            <TextView
+                android:id="@+id/formulaTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <!-- Result Display -->
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toSpinner"
+                android:layout_marginTop="20dp"
+                android:text="Converted Value"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+
+</RelativeLayout>
